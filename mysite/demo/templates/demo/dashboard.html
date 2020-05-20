@@ -1,0 +1,67 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f6e8f63835.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(12, 38, 109);">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search for users, category, places" aria-label="Search" style="margin-left: 100px; width: 500px">
+            <button style="width:100px; height:35px;"><i class="fa fa-search" style="margin-left: 5px;" @click="locatorButtonPressed"></i></button>
+          </form>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item active" style="margin-left: 200px ; font-size: 20px;">
+                <a class="nav-link" href="#">{{user.username}}<span class="sr-only">(current)</span></a>
+              </li>
+            <li class="nav-item " style="margin-left: 20px; font-size: 20px;">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style="font-size: 20px;margin-left: 20px;">
+              <a class="nav-link" href="#">Create</a>
+            </li>
+            <li class="nav-item" style="margin-top: 10px;margin-left: 20px;">
+                <i class="fas fa-user-friends fa-lg" style="color:white" ></i>
+            </li>
+            <li class="nav-item" style="margin-top: 10px;margin-left: 20px;">
+                <i class="fa fa-envelope fa-lg" style="color:white"  aria-hidden="true"></i>
+            </li>
+            <li class="nav-item" style="margin-top: 10px;margin-left: 20px;">
+                <i class="fa fa-bell fa-lg" style="color:white" aria-hidden="true"></i>
+            </li>
+            <li class="nav-item" style="margin-top: 10px;margin-left: 20px;">
+                <i class="fa fa-question-circle fa-lg" style="color:white" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <img src="{% static '/demo/images/bg2.jpg' %}" width="1400px" height="500px">
+        <br><br>
+        <img src="{% static '/demo/images/dp.jpg' %}" style="float: left; border-radius: 50%; margin-top: -200px; position: absolute; margin-left: 550px;" width="300px" height="300px">
+        <br>
+      </div>
+      <div class="container-fluid" style="margin-top: 100px">
+        <h1 style="text-align: center;"><strong>{{user.username}}</strong></h1>
+        <br><br>
+      </div>
+      <div style="margin-left: 150px; float: left;">
+        <h4><i class="fas fa-briefcase fa-lg"></i><strong> &emsp; Works at: &emsp;</strong>{{user.company}}</h4><br>
+        <h4><i class="fas fa-city fa-lg"></i><strong> &emsp; Lives in: &emsp;</strong>{{user.city}}</h4><br>
+        <h4><i class="fas fa-heart fa-lg"></i><strong>  &emsp; Category of Interest: &emsp;</strong>{{user.category}}</h4><br>
+        <h4><i class="fas fa-envelope-open-text fa-lg"></i><strong> &emsp; Contact: &emsp;</strong>{{user.email}}</h4><br>
+    </div>
+    <div style="margin-right: 200px; float: right;">
+        <h4><strong>Ratings: &emsp;</strong></h4>
+        <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+        <i class="fas fa-star-half fa-2x"></i>
+    </div>
+</body>

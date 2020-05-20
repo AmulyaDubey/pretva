@@ -1,0 +1,28 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'demo/style.css' %}">
+</head>
+<body> 
+    <div id="caption">
+        <h1><strong>Register for free to avail<br>our sevices.</strong></h1>
+    </div>
+  <div id="signup">
+          <div style="text-align: center; margin-top: 25;">
+            {% block content %}
+          <h2>Sign up</h2>
+          <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <p>
+                {{ field }}
+              </p>
+            {% endfor %}
+            <button type="submit" id="register_btn">Sign up</button>
+            
+          </form>
+        {% endblock %}
+        </div>
+        
+  </div>
+  
+</body>

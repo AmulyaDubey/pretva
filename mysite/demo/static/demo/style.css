@@ -1,0 +1,46 @@
+body{
+    background-image: url('../demo/images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}    
+#signup{
+    background-color:rgb(0, 0, 0);
+    float: right;
+    width: 100px;
+    margin-top: 10%;
+    margin-right: 5%;
+}
+
+.form-control{
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 250px;
+    height: 50px;
+    border-style: solid;
+    border-color: rgb(109, 108, 108);
+    border-width: 2px;
+    color: white;
+    border-radius: 20px;
+    padding:0px 10px 0px 10px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#register_btn{
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    border-color: rgb(109, 108, 108);
+    font-size: 20px;
+
+}
+
+#caption{
+    float:left;
+    font-size: 25px;
+   
+    color: white;
+    font-family: sans-serif;
+    margin-left: 20%;
+}
